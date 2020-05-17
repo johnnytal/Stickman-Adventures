@@ -70,8 +70,9 @@ menu.prototype = {
         }, this);
         
         contBtn.events.onInputUp.add(function(){ 
+        	if(AdMob) AdMob.showInterstitial();
+        	
             first_visit = {
-                
                 Street: store.get("stickman-first_visit_toStreet"),
                 Alley: store.get("stickman-first_visit_toAlley"),
                 Pub: store.get("stickman-first_visit_toPub"),
@@ -81,11 +82,9 @@ menu.prototype = {
                 Hall: store.get("stickman-first_visit_toHall"),
                 Stone_room: store.get("stickman-first_visit_toStone_room"),
                 Room: store.get("stickman-first_visit_toRoom"),
-
             }; 
             
-            missions = {
-                
+            missions = { 
                  ladder_mission: store.get("stickman-mission_complete_ladder_mission"),
                  stone_mission: store.get("stickman-mission_complete_stone_mission"),
                  window_mission: store.get("stickman-mission_complete_window_mission"),
@@ -93,8 +92,7 @@ menu.prototype = {
                  plug_mission: store.get("stickman-mission_complete_plug_mission"),
                  switch_mission: store.get("stickman-mission_complete_switch_mission"),
                  password_mission: store.get("stickman-mission_complete_password_mission"),
-                 stone_hall_mission: store.get("stickman-mission_complete_stone_hall_mission"),
-                 
+                 stone_hall_mission: store.get("stickman-mission_complete_stone_hall_mission"),  
             };
             
             inventory = [];

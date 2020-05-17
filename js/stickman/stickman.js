@@ -504,7 +504,8 @@ function initAd(){
     var admobid = {};
 
     admobid = {
-        banner: 'ca-app-pub-9795366520625065/1174780602'
+        banner: 'ca-app-pub-9795366520625065/1174780602',
+        interstitial: 'ca-app-pub-9795366520625065/7161001430'  
     };
 
     if(AdMob) AdMob.createBanner({
@@ -512,4 +513,6 @@ function initAd(){
        position: AdMob.AD_POSITION.TOP_CENTER,
        autoShow: true
     });
+    
+    if(AdMob) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );
 }

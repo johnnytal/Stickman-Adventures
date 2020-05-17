@@ -509,7 +509,7 @@ function initAd(){
 
     if(AdMob) AdMob.createBanner({
        adId: admobid.banner,
-       position: AdMob.AD_POSITION.BOTTOM_CENTER,
+       position: AdMob.AD_POSITION.TOP_CENTER,
        autoShow: true
     });
 }
